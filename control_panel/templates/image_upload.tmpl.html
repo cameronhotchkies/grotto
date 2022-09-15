@@ -1,25 +1,20 @@
-<html>
+{% extends 'base.tmpl.html' %}
 
-  <head>
-    {% include 'styles/base_styling.tmpl.html' %}
-  </head>
-  <body>
-    <h1>
-      Select an image to operate on:
-    </h1>
-      <p>
-        <form action="/crop/resize" method="POST" enctype="multipart/form-data">
-          <div class="container">
+{% block header %}
+Select an image to operate on:
+{% endblock %}
 
-            <div class="button-wrap">
-              <label class="button" for="source-image-upload">Choose File</label>
-              <input type="file" name="source-image" id="source-image-upload">
-            </div>
+{% block content %}
+<form action="/crop/resize" method="POST" enctype="multipart/form-data">
+  <div class="container">
 
-          </div>
-          <br />
-          <input type="submit" value="Submit"></button>
-        </form>
-      </p>
-  </body>
-</html>
+    <div class="button-wrap">
+      <label class="button" for="source-image-upload">Choose File</label>
+      <input type="file" name="source-image" id="source-image-upload">
+    </div>
+
+  </div>
+  <br />
+  <input type="submit" value="Submit"></button>
+</form>
+{% endblock %}

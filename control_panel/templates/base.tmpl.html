@@ -1,0 +1,19 @@
+<html>
+
+  <head>
+    {% include 'styles/base_styling.tmpl.html' %}
+
+    <script>
+      {% block script %}{% endblock %}
+    </script>
+  </head>
+
+  <body>
+    <h1>
+      {% block header %}{% endblock %}
+    </h1>
+
+    {% block content %}{% endblock %}
+
+  </body>
+</html>

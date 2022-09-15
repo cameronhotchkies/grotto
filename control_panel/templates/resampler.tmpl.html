@@ -1,23 +1,20 @@
-<html>
-  <head>
-    <script>
+{% extends 'base.tmpl.html' %}
 
-    </script>
+{% block header %}
+Save scene
+{% endblock %}
 
-    {% include 'styles/base_styling.tmpl.html' %}
+{% block content %}
+<form method="POST" action="/scene">
+  <input type="hidden" name="source-image" value="{{ encoded_file_content }}">
+  <label for="scene-name">Scene name:</label>
+  <input type="text" name="scene-name" id="scene-name">
+  <input type="submit" value="Save Scene">
+</form>
 
-  </head>
-
-  <body>
-
-    <form method="POST" action="/scene">
-      <input type="hidden" name="source-image" value="{{ encoded_file_content }}">
-      <label for="scene-name">Scene name:</label>
-      <input type="text" name="scene-name" id="scene-name">
-      <input type="submit" value="Save Scene">
-    </form>
-
-    <img src="data:image/png;base64,{{ encoded_file_content }}" />
-  </body>
-
-</html>
+<span>
+  Preview
+</span>
+<br />
+<img src="data:image/png;base64,{{ encoded_file_content }}" />
+{% endblock %}

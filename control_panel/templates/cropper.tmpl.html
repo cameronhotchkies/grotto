@@ -1,19 +1,14 @@
-<html>
-  <head>
-    <script>
-      {% include 'js/cropper.tmpl.js' %}
-    </script>
+{% extends 'base.tmpl.html' %}
 
+{% block script %}
+  {% include 'js/cropper.tmpl.js' %}
+{% endblock %}
 
-    {% include 'styles/base_styling.tmpl.html' %}
+{% block header %}
+  Select relevant portion of the image:
+{% endblock %}
 
-  </head>
-
-<body>
-  <h1>
-    Select relevant portion of the image:
-  </h1>
-
+{% block content %}
   <span>
 
     <div>
@@ -42,6 +37,4 @@
     <canvas id="display-canvas" width="400px" height="200px"></canvas>
     <canvas id="movement" width="400px" height="200px"></canvas>
   </div>
-
-</body>
-</html>
+{% endblock %}
