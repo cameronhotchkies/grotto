@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <script>
+      {% include 'js/cropper.tmpl.js' %}
+    </script>
+
+
+    {% include 'styles/base_styling.tmpl.html' %}
+
+  </head>
+
+<body>
+  <h1>
+    Select relevant portion of the image:
+  </h1>
+
+  <span>
+
+    <div>
+      [x, y, w, h]: <span id="selection-x">-</span>,
+      <span id="selection-y">-</span>,
+      <span id="selection-w">-</span>,
+      <span id="selection-h" class="unselectable">-</span>
+    </div>
+  </span>
+  <span>
+
+    <div>
+      <form method="POST" action="/crop/image">
+        <input type="submit" value="Crop">
+        <input type="hidden" id="min-x" name="min-x">
+        <input type="hidden" id="min-y" name="min-y">
+        <input type="hidden" id="width" name="width">
+        <input type="hidden" id="height" name="height">
+        <input type="hidden" name="source-image" value="{{ encoded_file_content }}">
+      </form>
+    </div>
+  </span>
+
+  <span id="cursor-catch"></span>
+  <div class="wrapper">
+    <canvas id="display-canvas" width="400px" height="200px"></canvas>
+    <canvas id="movement" width="400px" height="200px"></canvas>
+  </div>
+
+</body>
+</html>

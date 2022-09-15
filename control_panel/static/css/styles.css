@@ -1,0 +1,83 @@
+.wrapper canvas {
+  position: absolute;
+  top: 130;
+  left: 10;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  font-family: 'Londrina Solid', Arial, Helvetica, sans-serif;
+}
+
+input {
+  font-family: 'Londrina Solid', Arial, Helvetica, sans-serif;
+}
+
+.button-wrap {
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+input[type="file"] {
+  position: absolute;
+  z-index: -1;
+  top: 10px;
+  left: 8px;
+  font-size: 17px;
+  color: #b8b8b8;
+}
+
+input[type="submit"] {
+  background-color: #8cbeaa;
+  padding: .5em;
+  border-radius: 4px;
+  font-size: medium;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.first-color {
+	background: #f0f2eb;
+}
+
+.second-color {
+	background: #b5592a;
+}
+
+.third-color {
+	background: #f09027;
+}
+
+.fourth-color {
+	background: #8cbeaa;
+}
+
+.button {
+  background-color: #8ebf42;
+  display: inline-block;
+  padding: .5em;
+  border-radius: 3px;
+  font-family: 'Londrina Solid', Arial, Helvetica, sans-serif;
+
+  display: inline-block;
+  padding: 12px 23px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #b5592a;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
