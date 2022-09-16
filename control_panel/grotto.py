@@ -36,24 +36,25 @@ def crop_resize():
 
   file = request.files['source-image']
 
-  encoded_file_content = encode_image_for_formstate(file.read())
+  image = Image.open(file)
 
-  filesize = len(encoded_file_content)
+  # reset file buffer to re-encode
+  file.seek(0)
+  encoded_file_content = encode_image_for_formstate(file.read())
 
   return render_template(
     'cropper.tmpl.html',
-    filesize=filesize,
+    image_format=image.format,
     encoded_file_content=encoded_file_content
   )
 
-  # return Response(file.read(), mimetype='image/png')
-
 def extract_form_image(fieldname):
   encoded_file = request.form['source-image']
+  encoded_file_format = request.form['source-image-format']
   source_image = base64.b64decode(encoded_file)
   file_imgdata = BytesIO(source_image)
 
-  scene_image = Image.open(file_imgdata, formats=['PNG'])
+  scene_image = Image.open(file_imgdata, formats=['PNG', encoded_file_format])
 
   return scene_image
 

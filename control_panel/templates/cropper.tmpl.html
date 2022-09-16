@@ -10,6 +10,9 @@
 
 {% block content %}
   <span>
+    <div>
+      Format: {{ image_format }}
+    </div>
 
     <div>
       [x, y, w, h]: <span id="selection-x">-</span>,
@@ -28,6 +31,7 @@
         <input type="hidden" id="width" name="width">
         <input type="hidden" id="height" name="height">
         <input type="hidden" name="source-image" value="{{ encoded_file_content }}">
+        <input type="hidden" name="source-image-format" value="{{ image_format }}">
       </form>
     </div>
   </span>
