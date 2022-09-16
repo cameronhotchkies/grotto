@@ -15,6 +15,8 @@
 
 body {
   font-family: 'Londrina Solid', Arial, Helvetica, sans-serif;
+  color: #8f8787;
+  background-color: #f9f9f9;
 }
 
 input {
@@ -42,7 +44,7 @@ input[type="file"] {
 }
 
 input[type="submit"] {
-  background-color: #8cbeaa;
+  background-color: #a6e4e7;
   padding: .5em;
   border-radius: 4px;
   font-size: medium;
@@ -66,7 +68,7 @@ input[type="submit"] {
 }
 
 .button {
-  background-color: #8ebf42;
+  background-color: #a6e4e7;
   display: inline-block;
   padding: .5em;
   border-radius: 3px;
@@ -76,8 +78,8 @@ input[type="submit"] {
   padding: 12px 23px;
   cursor: pointer;
   border-radius: 5px;
-  background-color: #b5592a;
+  background-color: #ebcbae;
   font-size: 16px;
   font-weight: bold;
-  color: #fff;
+  color: #8f8787;
 }
