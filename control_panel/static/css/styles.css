@@ -17,6 +17,7 @@ body {
   font-family: 'Londrina Solid', Arial, Helvetica, sans-serif;
   color: #8f8787;
   background-color: #f9f9f9;
+  margin: 0;
 }
 
 input {
@@ -82,4 +83,42 @@ input[type="submit"] {
   font-size: 16px;
   font-weight: bold;
   color: #8f8787;
+}
+
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  border: 2px;
+  border-color: #8f8787;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #8f8787;
+  color: #ebcbae;
+  padding:.5em;
+  margin: 0;
+}
+
+.body-content {
+  margin: 10px;
+}
+
+.header-link {
+  text-decoration: none;
+}
+
+.header-link:visited {
+  color: #ebcbae;
+}
+
+.header-link:hover {
+  color: #ebcbae;
+}
+
+.header-link:active {
+  color: #ebcbae;
 }
